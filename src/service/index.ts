@@ -37,12 +37,6 @@ export const readData = async (sheet: ExcelJS.Worksheet, dataColumns: any) => {
     if (rowNumber > 1) {
       let newUser: any = {};
       row.eachCell((cell, colNumber) => {
-        // for (const propiedad in dataColumns) {
-        //   if (colNumber === dataColumns[propiedad]) {
-        //     newUser[propiedad] = cell.value;
-        //   }
-        // }
-        // * -----
         const propiedad = Object.keys(dataColumns).find(
           (key) => dataColumns[key] === colNumber
         );
